@@ -72,3 +72,18 @@ def display_summary(url):
     display(Markdown(summary))
 
 display_summary("https://edwarddonner.com")
+
+# Uncomment to try using Ollama
+
+# import ollama
+
+# MODEL='llama3.2'
+# URL='http://localhost:11434/api/chat'
+# HEADERS = {"Content-Type": "application/json"}
+
+# def summarize_ollama(url):
+#     website = Website(url)
+#     response = ollama.chat(MODEL=MODEL, messages = messages_for(website))
+#     return response['message']['content']
+
+# display_summary("https://edwarddonner.com")
