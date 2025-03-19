@@ -33,7 +33,7 @@ class Website:
         Create this Website object from the given url using the BeautifulSoup library
         """
         self.url = url
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, verify=False)
         soup = BeautifulSoup(response.content, 'html.parser')
         self.title = soup.title.string if soup.title else "No title found"
         for irrelevant in soup.body(["script", "style", "img", "input"]):
