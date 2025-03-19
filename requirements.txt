@@ -4,3 +4,4 @@ jupyter-dash
 beautifulsoup4
 requests
 openai
+ollama
